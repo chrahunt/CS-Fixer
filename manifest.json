@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "ContingentStaffing Fixer",
+  "version": "0.1",
+  "description": "This extension fixes some Chrome compatibility issues with API Healthcare's Contingent Staffing website",
+  "content_scripts": [
+    {
+      "matches":["https://agencystaffing.apihealthcare.com/*/temphistory.cfm*"],
+      "js": ["js/jquery-2.0.3.min.js", "js/tempHistory.js"]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ]
+}
