@@ -5,8 +5,13 @@
   "description": "This extension fixes some Chrome compatibility issues with API Healthcare's Contingent Staffing website",
   "content_scripts": [
     {
-      "matches":["https://agencystaffing.apihealthcare.com/*/temphistory.cfm*"],
+      "matches": ["https://agencystaffing.apihealthcare.com/*/temphistory.cfm*"],
       "js": ["js/jquery-2.0.3.min.js", "js/tempHistory.js"]
+    },
+    {
+      "matches": ["https://agencystaffing.apihealthcare.com/*/submissionBuild.cfm*"],
+      "js": ["js/submissionBuild.js"],
+      "run_at": "document_start"
     }
   ],
   "permissions": [
