@@ -23,5 +23,8 @@
     "webRequest",
     "webRequestBlocking"
   ],
-  "web_accessible_resources": ["js/tabs.js"]
+  "web_accessible_resources": [
+    "js/tabs.js",
+    "js/submissionBuild-setButtonNav.js"
+  ]
 }
