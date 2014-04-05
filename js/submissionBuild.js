@@ -43,7 +43,7 @@ function onScriptsFound(scriptElts) {
       var scriptElt = scriptElts.item(i);
       var result = scriptElt.outerHTML.indexOf("function setButtonNav");
       if (result !== -1) {
-        var location = chrome.extension.getURL('js/submissionBuild-setButtonNav.js');
+        var location = chrome.extension.getURL('js/submissionBuild-pageScript.js');
         injectExtScriptAfter(scriptElt, location);
         injected_script = true;
         break;
