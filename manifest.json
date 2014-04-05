@@ -1,6 +1,7 @@
 {
   "manifest_version": 2,
   "name": "ContingentStaffing Fixer",
+  "short_name": "CS Fixer",
   "version": "0.2",
   "description": "This extension fixes some Chrome compatibility issues with API Healthcare's Contingent Staffing website",
   "background": {
