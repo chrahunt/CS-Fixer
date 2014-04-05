@@ -79,25 +79,25 @@ tabs.prototype.drawTabs = function () {
 
 tabs.prototype.drawHeadings = function () {
   var oThis = this;
-  for (var a=0;a < this.aTabs.length; a++) {
+  for (var a = 0; a < this.aTabs.length; a++) {
     var heading = document.createElement("h4");
     heading.innerHTML = this.aTabs[a];
     heading.className = "tabHeading";
-    this.tabbed[a].insertBefore(heading,this.tabbed[a].firstChild);
+    this.tabbed[1 + (2*a)].insertBefore(heading, this.tabbed[1 + (2*a)].children[0]);
   }
 }
 
 tabs.prototype.tabSwitch = function(id) {
-  var tabs = this.obj.firstChild.childNodes;
-  for (var a=0; a < tabs.length - 1; a++) {
+  var tabs = this.obj.children[0].childNodes;
+  for (var a = 0; a < tabs.length - 1; a++) {
     if (tabs[a].ref == id) {
       tabs[a].className = tabs[a].prevClass + " on";
-      this.tabbed[a].className = "active";
+      this.tabbed[1 + (2*a)].className = "active";
     } else {
       if(tabs[a].className.indexOf("disabled") < 1) { 
         tabs[a].className = tabs[a].prevClass; 
       }
-      this.tabbed[a].className = "not_active";
+      this.tabbed[1 + (2*a)].className = "not_active";
     }
   }
 }
