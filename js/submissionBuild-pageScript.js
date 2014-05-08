@@ -53,6 +53,11 @@ Object.defineProperty(window, 'nextStep', {
         document.submissionBuild.emailBody.options[i].selected = true;
       for (var i=0; i < document.submissionBuild.emailStitch.length; i++)
         document.submissionBuild.emailStitch.options[i].selected = true;
+
+      document.getElementById('emailAttachmentsFileNames').value = setFileName(document.getElementById('emailAttachments'));
+      document.getElementById('emailBodyFileNames').value = setFileName(document.getElementById('emailBody'));
+      document.getElementById('emailStitchFileNames').value = setFileName(document.getElementById('emailStitch'));
+      
       document.submissionBuild.submit();
     } else { 
       subTabs.tabEnable(otab);
